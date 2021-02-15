@@ -10,7 +10,7 @@ export default function Home(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Hello MinHyup!</h1>
+      <h1>Hello MinHyup!-그 다음 배포입니다.</h1>
     </div>
   );
 }
