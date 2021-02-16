@@ -11,6 +11,8 @@ export default function Home(): React.ReactElement {
       <Head>
         <title>리액트!!!</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="menu 페이지" />
+        <meta property="og:description" content="menu description" />
       </Head>
       <h1>menu 페이지??</h1>
       <footer>

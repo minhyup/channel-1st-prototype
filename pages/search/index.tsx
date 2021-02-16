@@ -36,6 +36,8 @@ export default function Home(): React.ReactElement {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content="SEO  Description 테스트(search)" />
           <meta name="author" content="HLI" />
+          <meta property="og:title" content="search페이지" />
+          <meta property="og:description" content="search페이지 description" />
         </Head>
         <header className="header">
           <div className="bell">
