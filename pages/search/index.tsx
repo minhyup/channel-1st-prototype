@@ -31,8 +31,11 @@ export default function Home(): React.ReactElement {
     <>
       <div className="container" style={{ paddingBottom: '40px' }}>
         <Head>
-          <title>리액트!!!</title>
+          <title>상품검색 페이지</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content="SEO  Description 테스트" />
+          <meta name="author" content="HLI" />
         </Head>
         <header className="header">
           <div className="bell">

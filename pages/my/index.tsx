@@ -9,14 +9,19 @@ import GraphIcon from '../../public/svg/graph.svg';
 import MyProductIcon from '../../public/svg/myproduct.svg';
 import SearchIcon from '../../public/svg/prdsearch.svg';
 import MenuIcon from '../../public/svg/menu.svg';
+import { fakeApi } from '../../api';
+import Skeleton from '@material-ui/lab/Skeleton';
 
 export default function Home(): React.ReactElement {
   const router = useRouter();
   return (
     <div className="container">
       <Head>
-        <title>리액트!!!</title>
+        <title>My페이지</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="SEO  Description 테스트" />
+        <meta name="author" content="HLI" />
       </Head>
 
       <header className="header">
@@ -26,7 +31,11 @@ export default function Home(): React.ReactElement {
         <div>
           <HelpIcon />
         </div>
+        <button onClick={() => fakeApi(2000).then(() => console.log('ok'))}>test</button>
       </header>
+      <div>
+        <Skeleton animation="wave" variant="text" height={100} />
+      </div>
       <section className="category">
         <div className="title_wrap">
           <span className="title">보험</span>
