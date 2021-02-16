@@ -20,7 +20,7 @@ export default function Home(): React.ReactElement {
         <title>My페이지</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="SEO  Description 테스트" />
+        <meta name="description" content="SEO  Description 테스트(my)" />
         <meta name="author" content="HLI" />
       </Head>
 
