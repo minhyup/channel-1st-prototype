@@ -1,0 +1,198 @@
+.searchGuide {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 4px;
+}
+
+.searchGuideContents {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+  color: #000000;
+}
+
+.tabMenu {
+  display: flex;
+  height: 56px;
+  margin: 16px 0;
+}
+
+.tabMenuItem {
+  font-size: 18px;
+  color: #666666;
+  padding: 16px 16px 0;
+}
+.tabMenuItemSelected {
+  color: #000000;
+}
+
+.tabMenuItemSelectedText {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 100%;
+  border-bottom: 2px solid #242424;
+}
+
+.bannerCard {
+  margin-bottom: 20px;
+  padding: 34px 24px 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px 0 rgba(98, 105, 190, 0.3);
+  background-color: #6269be;
+}
+
+.bannerCardTitle {
+  display: block;
+  opacity: 0.4;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+.bannerCardDesc {
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.bannerCardPoint {
+  color: #fddfb2;
+}
+.bannerCardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 272px; */
+}
+
+.card_wrap {
+  padding: 24px 16px 24px 24px;
+  border-radius: 14px;
+  background-color: #ffffff;
+}
+.card_title {
+  display: inline-block;
+  height: 26px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.card_row {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.card_row_main {
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.card_detail {
+  font-size: 14px;
+  color: #999999;
+}
+
+.card_row_name {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+}
+.card_row_right {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+}
+
+.card_tag {
+  display: inline-block;
+  height: 16px;
+  padding: 1px 8px 1px 9px;
+  border-radius: 8px;
+  background-color: #fbb03f;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+.card_tag.new {
+  background-color: #ff6600;
+}
+
+.card_arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.consult {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+.consultTitleWrap {
+  height: 80px;
+  margin: 0 0 24px;
+  padding: 8px 21px 8px 4px;
+}
+.consultTitle {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+  color: #000000;
+}
+.consultIcon {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px 0 0;
+}
+.consultIconTitle {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: #333333;
+}
+.consultIconItem {
+  width: 62px;
+  height: 62px;
+  text-align: center;
+  margin-right: 24px;
+}
+
+.direct {
+  margin-top: 10px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.hliBanner {
+  margin: 32px 0 0;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fdeed8;
+  border-radius: 8px;
+}
+.bannerText {
+  font-size: 16px;
+  color: #333333;
+}
+.bannerPoint {
+  color: #ff6600;
+}
+.bannerSubText {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: #9e7e6c;
+}
