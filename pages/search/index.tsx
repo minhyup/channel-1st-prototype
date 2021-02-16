@@ -108,88 +108,88 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
         </section>
-      </div>
-      <section className={cx('consult')}>
-        <div className={cx('consultTitleWrap')}>
-          <span className={cx('consultTitle')}>
-            보험이 어렵다면
-            <br />
-            상담사와 쉽게 가입해보세요
-          </span>
-        </div>
-        <div className={cx('consultIcon')}>
-          <div className={cx('consultIconItem')}>
-            <B className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <C className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <D className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <E className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <F className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <G className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <H className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>종신/정기</span>
-          </div>
-        </div>
-      </section>
-      <section className={cx('direct')}>
-        <div className={cx('consultTitleWrap')}>
-          <span className={cx('consultTitle')}>금융상품 바로가기</span>
-        </div>
-        <div className={cx('consultIcon')}>
-          <div className={cx('consultIconItem')}>
-            <I className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>대출</span>
-          </div>
-          <div className={cx('consultIconItem')}>
-            <J className={cx('icon')} />
-            <span className={cx('consultIconTitle')}>퇴직연금</span>
-          </div>
-        </div>
-        <div className={cx('hliBanner')}>
-          <div>
-            <span className={cx('bannerText')}>
-              <span className={cx('bannerPoint')}>한화생명 모바일앱</span>이<br />
-              새로워 졌어요!
+        <section className={cx('consult')}>
+          <div className={cx('consultTitleWrap')}>
+            <span className={cx('consultTitle')}>
+              보험이 어렵다면
+              <br />
+              상담사와 쉽게 가입해보세요
             </span>
-            <span className={cx('bannerSubText')}>앱스토어에 평점을 남겨주세요</span>
           </div>
-          <div>
-            <A />
+          <div className={cx('consultIcon')}>
+            <div className={cx('consultIconItem')}>
+              <B className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <C className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <D className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <E className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <F className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <G className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <H className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>종신/정기</span>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section className={cx('direct')}>
+          <div className={cx('consultTitleWrap')}>
+            <span className={cx('consultTitle')}>금융상품 바로가기</span>
+          </div>
+          <div className={cx('consultIcon')}>
+            <div className={cx('consultIconItem')}>
+              <I className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>대출</span>
+            </div>
+            <div className={cx('consultIconItem')}>
+              <J className={cx('icon')} />
+              <span className={cx('consultIconTitle')}>퇴직연금</span>
+            </div>
+          </div>
+          <div className={cx('hliBanner')}>
+            <div>
+              <span className={cx('bannerText')}>
+                <span className={cx('bannerPoint')}>한화생명 모바일앱</span>이<br />
+                새로워 졌어요!
+              </span>
+              <span className={cx('bannerSubText')}>앱스토어에 평점을 남겨주세요</span>
+            </div>
+            <div>
+              <A />
+            </div>
+          </div>
+        </section>
 
-      <footer>
-        <button className="icon_text" onClick={() => router.push('/my')}>
-          <MyProductIcon />
-          <span className="footer_title">나의계약</span>
-        </button>
-        <button className="icon_text" onClick={() => router.push('/search')}>
-          <SearchIcon />
-          <span className="footer_title">상품찾기</span>
-        </button>
-        <button className="icon_text" onClick={() => router.push('/menu')}>
-          <MenuIcon />
-          <span className="footer_title">메뉴</span>
-        </button>
-      </footer>
+        <footer>
+          <button className="icon_text" onClick={() => router.push('/my')}>
+            <MyProductIcon />
+            <span className="footer_title">나의계약</span>
+          </button>
+          <button className="icon_text" onClick={() => router.push('/search')}>
+            <SearchIcon />
+            <span className="footer_title">상품찾기</span>
+          </button>
+          <button className="icon_text" onClick={() => router.push('/menu')}>
+            <MenuIcon />
+            <span className="footer_title">메뉴</span>
+          </button>
+        </footer>
+      </div>
     </>
   );
 }
