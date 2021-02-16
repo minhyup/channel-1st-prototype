@@ -7,12 +7,12 @@ import MenuIcon from '../../public/svg/menu.svg';
 export default function Home(): React.ReactElement {
   const router = useRouter();
   return (
-    <div>
+    <div className="container">
       <Head>
         <title>리액트!!!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>menu</div>
+      <h1>menu 페이지??</h1>
       <footer>
         <button className="icon_text" onClick={() => router.push('/my')}>
           <MyProductIcon />
