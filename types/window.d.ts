@@ -4,6 +4,7 @@ declare global {
   interface Window {
     AndroidBridge: any;
   }
+}
 // }
 // window.AndroidBridge = window.AndroidBridge || 'SomeValue';
 // declare global {
