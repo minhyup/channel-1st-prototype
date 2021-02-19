@@ -53,7 +53,7 @@ export default function Home(): React.ReactElement {
     console.log('callNative');
 
     const jsonObject = {
-      command: 'apiSample',
+      command: 'apiRecommended',
       args: { num: 10, str: 'string', bool: true },
       callback: callbackNativeResponse
     };
