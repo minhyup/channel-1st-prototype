@@ -179,7 +179,7 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
         </section>
-
+        <div style={{ height: '100px' }}></div>
         <footer>
           <button className="icon_text" onClick={() => router.push('/my')}>
             <MyProductIcon />

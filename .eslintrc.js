@@ -23,7 +23,7 @@ module.exports = {
   plugins: ['import'],
   rules: {
     // 룰 정의
-    // 'react/prop-types': 'off',
+    'react/prop-types': 'off',
     'no-var': 'error',
     'no-dupe-keys': 'error'
   }
