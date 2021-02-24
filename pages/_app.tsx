@@ -1,10 +1,16 @@
 import React from 'react';
 import { AppProps } from 'next/app';
-import '../styles/globals.css';
-import '../styles/my.css';
+import { GlobalStyles } from '@/styles/ts/GlobalStyle';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from '@/styles/ts/theme';
 
-function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
-  return <Component {...pageProps} />;
+export default function HliApp({ Component, pageProps }: AppProps): React.ReactElement {
+  return (
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }
-
-export default MyApp;
