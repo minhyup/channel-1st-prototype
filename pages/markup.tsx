@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import Card from '@/components/elements/Card';
+//import Card from '@/components/elements/Card';
 import CardHeadTitle from '@/components/elements/CardHeadTitle';
-import CardTop from '@/components/combinations/CardTop';
-import ContractList from '@/components/combinations/ContractList';
-import ButtonArea from '@/components/elements/ButtonArea';
+//import CardTop from '@/components/combinations/CardTop';
+//import ContractList from '@/components/combinations/ContractList';
+//import ButtonArea from '@/components/elements/ButtonArea';
 import Banner from '@/components/combinations/Banner';
-import ToastPopup from '@/components/elements/ToastPopup';
+//import ToastPopup from '@/components/elements/ToastPopup';
 
 export default function Home(): React.ReactElement {
   return (
