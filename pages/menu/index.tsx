@@ -8,6 +8,7 @@ import MenuIcon from '../../public/svg/menu.svg';
 import { darken, lighten } from 'polished';
 //import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+//import { window } from '@/types/native';
 //import { alert } from '../../types/global';
 
 // declare global {
@@ -49,6 +50,7 @@ export default function Home(): React.ReactElement {
     alert(`data는? ${data}`);
   };
 
+  // request (Web --> Native)
   const callNative = () => {
     console.log('callNative');
 
@@ -63,7 +65,8 @@ export default function Home(): React.ReactElement {
     if (window.AndroidBridge) {
       window.AndroidBridge.callNativeMethod('native://callNative?' + query);
     } else if (/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
-      window.location.href = 'native://callNative?' + query;
+      window.webkit.messageHandlers['callNative'].postMessage(query);
+      //window.location.href = 'native://callNative?' + query;
     } else {
       alert('Native calls are not supported.');
     }
