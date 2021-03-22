@@ -47,8 +47,12 @@ export default function Home(): React.ReactElement {
   const router = useRouter();
 
   const callbackNativeResponse = (data: any) => {
+    console.log(`data는? ${data}`);
     alert(`data는? ${data}`);
   };
+
+  console.log(callbackNativeResponse.toString());
+  console.log(callbackNativeResponse);
 
   // request (Web --> Native)
   const callNative = () => {
@@ -71,6 +75,28 @@ export default function Home(): React.ReactElement {
       alert('Native calls are not supported.');
     }
   };
+
+  const callNative2 = () => {
+    console.log('callNative2');
+
+    const jsonObject = {
+      command: 'apiRecommended',
+      args: { num: 10, str: 'string', bool: true },
+      callback: callbackNativeResponse.toString()
+    };
+
+    const query = btoa(encodeURIComponent(JSON.stringify(jsonObject)));
+    // window.
+    if (window.AndroidBridge) {
+      window.AndroidBridge.callNativeMethod('native://callNative?' + query);
+    } else if (/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+      window.webkit.messageHandlers['callNative'].postMessage(query);
+      //window.location.href = 'native://callNative?' + query;
+    } else {
+      alert('Native calls are not supported.');
+    }
+  };
+
   const geDataFromNative = () => {
     console.log('geDataFromNative');
     alert('test');
@@ -92,6 +118,7 @@ export default function Home(): React.ReactElement {
           <Button onClick={geDataFromNative}>Check the received data</Button>
 
           <Button onClick={callNative}>Native Call2(window 전용)</Button>
+          <Button onClick={callNative2}>Native Call2(toString 전용)</Button>
         </ButtonGroup>
         {/* <div style={{ margin: '50px 0' }}>
           <Button css={buttonStyle}>Web --&gt; Navive Call Test</Button>
