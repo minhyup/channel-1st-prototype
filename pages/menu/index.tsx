@@ -65,7 +65,7 @@ export default function Home(): React.ReactElement {
     const jsonObject = {
       command: 'apiRecommended',
       args: { num: 10, str: 'string', bool: true },
-      callbackScriptName: 'callBack'
+      callbackScriptName: 'window.NATIVE_UTILS.callBack'
     };
 
     const query = btoa(encodeURIComponent(JSON.stringify(jsonObject)));
