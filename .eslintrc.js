@@ -14,15 +14,15 @@ module.exports = {
   extends: [
     'plugin:react/recommended', // 리액트 추천 룰셋
     'plugin:react-hooks/recommended', // 훅 룰셋 적용
-
     'plugin:@typescript-eslint/recommended', // 타입스크립트 추천 룰셋
-    'prettier/@typescript-eslint', // eslint의 타입스크립트 포맷팅 기능 제거(eslint-config-prettier)
-
     'plugin:prettier/recommended' // eslint-plugin-prettier(가장 마지막에 와야함)
   ],
   plugins: ['import'],
   rules: {
     // 룰 정의
+    'prettier/prettier': 'off',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
     'react/prop-types': 'off',
     'no-var': 'error',
     'no-dupe-keys': 'error'

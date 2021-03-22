@@ -57,7 +57,7 @@ export default function Home(): React.ReactElement {
     const jsonObject = {
       command: 'apiRecommended',
       args: { num: 10, str: 'string', bool: true },
-      callback: callbackNativeResponse
+      callback: 'callBack'
     };
 
     const query = btoa(encodeURIComponent(JSON.stringify(jsonObject)));
@@ -90,6 +90,8 @@ export default function Home(): React.ReactElement {
           <Button onClick={callNative}>Native Call</Button>
           <h1>Navive Call Test --&gt; Web</h1>
           <Button onClick={geDataFromNative}>Check the received data</Button>
+
+          <Button onClick={callNative}>Native Call2(window 전용)</Button>
         </ButtonGroup>
         {/* <div style={{ margin: '50px 0' }}>
           <Button css={buttonStyle}>Web --&gt; Navive Call Test</Button>
