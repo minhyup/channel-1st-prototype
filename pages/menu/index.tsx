@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import MyProductIcon from '../../public/svg/myproduct.svg';
 import SearchIcon from '../../public/svg/prdsearch.svg';
 import MenuIcon from '../../public/svg/menu.svg';
+import useNative from '@/hooks/useNative';
 //import Button from '../../components/elements/Button';
 import { darken, lighten } from 'polished';
 //import { css } from '@emotion/react';
@@ -46,6 +47,8 @@ const Button = styled.button`
 
 export default function Home(): React.ReactElement {
   const router = useRouter();
+  const { call, then, resData } = useNative();
+  console.log(call, then, resData);
 
   const callbackNativeResponse = (data: any) => {
     console.log(`data는? ${data}`);
@@ -101,6 +104,27 @@ export default function Home(): React.ReactElement {
     }
   };
 
+  const callNative3 = () => {
+    console.log('callNative3');
+
+    const jsonObject = {
+      command: 'apiRecommended',
+      args: { num: 10, str: 'string', bool: true },
+      callbackScriptName: 'window.NATIVE_UTILS2.callBack'
+    };
+
+    const query = btoa(encodeURIComponent(JSON.stringify(jsonObject)));
+    // window.
+    if (window.AndroidBridge) {
+      window.AndroidBridge.callNativeMethod('native://callNative?' + query);
+    } else if (/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+      window.webkit.messageHandlers['callNative'].postMessage(query);
+      //window.location.href = 'native://callNative?' + query;
+    } else {
+      alert('Native calls are not supported.');
+    }
+  };
+
   const geDataFromNative = () => {
     console.log('geDataFromNative');
     alert('test');
@@ -123,6 +147,8 @@ export default function Home(): React.ReactElement {
 
           <Button onClick={callNative}>Native Call2(window 전용)</Button>
           <Button onClick={callNative2}>Native Call2(toString 전용)</Button>
+
+          <Button onClick={callNative3}>Native Call3(window 전용)</Button>
         </ButtonGroup>
         {/* <div style={{ margin: '50px 0' }}>
           <Button css={buttonStyle}>Web --&gt; Navive Call Test</Button>

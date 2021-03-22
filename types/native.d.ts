@@ -4,6 +4,8 @@ declare global {
     AndroidBridge: any;
     webkit: any;
     NATIVE_UTILS: any;
+    NATIVE_UTILS2: any;
+    setResData: any;
   }
 }
 export interface INatvieProps {
