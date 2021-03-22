@@ -8,6 +8,7 @@ import MenuIcon from '../../public/svg/menu.svg';
 import { darken, lighten } from 'polished';
 //import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+
 //import { window } from '@/types/native';
 //import { alert } from '../../types/global';
 
@@ -51,8 +52,11 @@ export default function Home(): React.ReactElement {
     alert(`data는? ${data}`);
   };
 
-  console.log(callbackNativeResponse.toString());
-  console.log(callbackNativeResponse);
+  //console.log(callbackNativeResponse.toString());
+  // const test = eval(callbackNativeResponse.toString());
+  // console.log(eval('callbackNativeResponse')('test'));
+  //eval(callbackNativeResponse.toString();
+  //console.log(callbackNativeResponse);
 
   // request (Web --> Native)
   const callNative = () => {
@@ -61,7 +65,7 @@ export default function Home(): React.ReactElement {
     const jsonObject = {
       command: 'apiRecommended',
       args: { num: 10, str: 'string', bool: true },
-      callback: 'callBack'
+      callbackScriptName: 'callBack'
     };
 
     const query = btoa(encodeURIComponent(JSON.stringify(jsonObject)));
@@ -82,7 +86,7 @@ export default function Home(): React.ReactElement {
     const jsonObject = {
       command: 'apiRecommended',
       args: { num: 10, str: 'string', bool: true },
-      callback: callbackNativeResponse.toString()
+      callbackScriptName: callbackNativeResponse.toString()
     };
 
     const query = btoa(encodeURIComponent(JSON.stringify(jsonObject)));
